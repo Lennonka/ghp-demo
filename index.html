@@ -3,26 +3,14 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Apiman 1.4.3.Final documentation</title>
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
-  </head><body>
+<body>
 
     <div class="document">
       <div class="documentwrapper">
           <div class="body" role="main">
-            
+
   <div class="section" id="getting-started-with-apiman">
-<h1>Getting Started with Apiman<a class="headerlink" href="#getting-started-with-apiman" title="Permalink to this headline">¶</a></h1>
+<h1>Getting Started with Apiman<a class="headerlink" href="#getting-started-with-apiman" title="Permalink to this headline"></a></h1>
 <p>Apiman is a web-based API management tool that allows you to add an
 extra layer of access control functionality to an API service, which
 itself may not provide any.</p>
@@ -34,7 +22,7 @@ and through basic configuration of an API provider and consumer with
 a simple usage policy.</p>
 <p></p>
 <div class="section" id="preparing-the-environment">
-<h2>Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permalink to this headline">¶</a></h2>
+<h2>Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permalink to this headline"></a></h2>
 <p>You need to prepare the Apiman by taking the following steps.</p>
 <p>Additionaly, we are going to use Echo service as a demo implementation
 provided by <em>apiman-quickstarts</em>, which will be prepared within just a few
@@ -48,7 +36,7 @@ takes advantage of default configurations and it does not solve any security
 issues that must be considered before production deployment!</p>
 </div>
 <div class="section" id="prepare-the-apiman">
-<h3>Prepare the <em>Apiman</em><a class="headerlink" href="#prepare-the-apiman" title="Permalink to this headline">¶</a></h3>
+<h3>Prepare the <em>Apiman</em><a class="headerlink" href="#prepare-the-apiman" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
 <li>Download the WildFly
 <a class="reference external" href="http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip">10.1.0.Final</a>
@@ -62,7 +50,7 @@ directory.</li>
 </ol>
 </div>
 <div class="section" id="prepare-the-echo-service">
-<h3>Prepare the <em>Echo service</em><a class="headerlink" href="#prepare-the-echo-service" title="Permalink to this headline">¶</a></h3>
+<h3>Prepare the <em>Echo service</em><a class="headerlink" href="#prepare-the-echo-service" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
 <li>Clone the <a class="reference external" href="https://github.com/apiman/apiman-quickstarts">apiman-quickstarts
 repository</a> (or
@@ -78,7 +66,7 @@ install Maven first.)</li>
 </div>
 </div>
 <div class="section" id="logging-in-to-the-apiman-administration">
-<h2>Logging in to the <em>Apiman</em> administration<a class="headerlink" href="#logging-in-to-the-apiman-administration" title="Permalink to this headline">¶</a></h2>
+<h2>Logging in to the <em>Apiman</em> administration<a class="headerlink" href="#logging-in-to-the-apiman-administration" title="Permalink to this headline"></a></h2>
 <p>Open the <a class="reference external" href="http://localhost:8080/apimanui/">Apiman UI</a> in your browser
 and login with “<code class="docutils literal notranslate"><span class="pre">admin</span></code>” / “<code class="docutils literal notranslate"><span class="pre">admin123!</span></code>”.</p>
 <div class="figure align-center">
@@ -91,9 +79,9 @@ and login with “<code class="docutils literal notranslate"><span class="pre">a
 <p></p>
 </div>
 <div class="section" id="configuring-a-simple-api-provider">
-<h2>Configuring a simple API provider<a class="headerlink" href="#configuring-a-simple-api-provider" title="Permalink to this headline">¶</a></h2>
+<h2>Configuring a simple API provider<a class="headerlink" href="#configuring-a-simple-api-provider" title="Permalink to this headline"></a></h2>
 <div class="section" id="create-an-organization">
-<h3>Create an organization<a class="headerlink" href="#create-an-organization" title="Permalink to this headline">¶</a></h3>
+<h3>Create an organization<a class="headerlink" href="#create-an-organization" title="Permalink to this headline"></a></h3>
 <ol class="arabic">
 <li><p class="first">On the index page, click on the link <span class="guilabel">Create a New Organization</span>.</p>
 <div class="figure align-center">
@@ -111,7 +99,7 @@ and login with “<code class="docutils literal notranslate"><span class="pre">a
 </ol>
 </div>
 <div class="section" id="create-a-plan">
-<h3>Create a plan<a class="headerlink" href="#create-a-plan" title="Permalink to this headline">¶</a></h3>
+<h3>Create a plan<a class="headerlink" href="#create-a-plan" title="Permalink to this headline"></a></h3>
 <p>Now, we are going to set a policy plan for our future API.
 In general, policy plans allow you to assign various policies to various consumers.
 Let’s say you want to set a quota.</p>
@@ -154,7 +142,7 @@ it for use in a contract with an API consumer.</p>
 </ol>
 </div>
 <div class="section" id="add-an-api">
-<h3>Add an API<a class="headerlink" href="#add-an-api" title="Permalink to this headline">¶</a></h3>
+<h3>Add an API<a class="headerlink" href="#add-an-api" title="Permalink to this headline"></a></h3>
 <ol class="arabic">
 <li><p class="first">On the <em>EchoOrganization</em> page, switch to the <span class="guilabel">APIs</span> tab and click
 on the <span class="guilabel">New API</span> button.</p>
@@ -207,7 +195,7 @@ is now available.</p>
 </div>
 </div>
 <div class="section" id="configuring-a-simple-api-consumer">
-<h2>Configuring a simple API consumer<a class="headerlink" href="#configuring-a-simple-api-consumer" title="Permalink to this headline">¶</a></h2>
+<h2>Configuring a simple API consumer<a class="headerlink" href="#configuring-a-simple-api-consumer" title="Permalink to this headline"></a></h2>
 <p>Add a consumer
 Create a contract (assign plan)</p>
 <ol class="arabic">
@@ -252,7 +240,7 @@ will use to access the private API.</p>
 </ol>
 </div>
 <div class="section" id="testing-the-policy">
-<h2>Testing the policy<a class="headerlink" href="#testing-the-policy" title="Permalink to this headline">¶</a></h2>
+<h2>Testing the policy<a class="headerlink" href="#testing-the-policy" title="Permalink to this headline"></a></h2>
 <p>First, find the API key – on the <em>EchoConsumer</em> page, switch to the
 <span class="guilabel">APIs</span> tab, where you can copy the key and the location of the API
 endpoint.</p>
@@ -265,18 +253,18 @@ used in the following examples. Replace the key before you use the code.</p>
 <a class="reference internal image-reference" href="_images/APIEndpointKey.png"><img alt="_images/APIEndpointKey.png" src="_images/APIEndpointKey.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
 </div>
 <div class="section" id="basic-response">
-<h3>Basic response<a class="headerlink" href="#basic-response" title="Permalink to this headline">¶</a></h3>
+<h3>Basic response<a class="headerlink" href="#basic-response" title="Permalink to this headline"></a></h3>
 <p>To check that you can get through to the Echo service, which was made private
 and is proxied by the Apiman, use the Apiman-provided endpoint and append
 a regular Echo service path, for example:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span> curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; -X GET https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
   <span class="nt">&quot;resource&quot;</span> <span class="p">:</span> <span class="s2">&quot;/apiman-echo/hello&quot;</span><span class="p">,</span>
@@ -296,16 +284,16 @@ a regular Echo service path, for example:</p>
 </div>
 </div>
 <div class="section" id="quota-information">
-<h3>Quota information<a class="headerlink" href="#quota-information" title="Permalink to this headline">¶</a></h3>
+<h3>Quota information<a class="headerlink" href="#quota-information" title="Permalink to this headline"></a></h3>
 <p>To check the quota consumption, view the response headers, for example:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; --head https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
 X-Powered-By: Undertow/1
 X-Quota-Remaining: 6
@@ -323,7 +311,7 @@ Content-Length: 320
 </div>
 </div>
 <div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://apiman.gitbooks.io/apiman-user-guide/">User Guide</a></p>
 <p><strong>The end!</strong></p>
 </div>

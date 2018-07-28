@@ -60,11 +60,7 @@ Logging in to the *Apiman* administration
 Open the [Apiman UI](http://localhost:8080/apimanui/) in your browser
 and login with "`admin`" / "`admin123!`".
 
-![](_images/Login.png)
-
 You will see the Apiman index page.
-
-![](_images/Apiman_index.png)
 
 Configuring a simple API provider
 ---------------------------------
@@ -73,12 +69,8 @@ Configuring a simple API provider
 
 1.  On the index page, click on the link Create a New Organization.
 
-    ![](_images/Org_1.png)
-
 2.  Fill in an organization name, e.g. `EchoCompany`. Confirm by
     clicking on Create Organization.
-
-    ![](_images/Org_2.png)
 
 3.  You will see the page of your new organization.
 
@@ -90,16 +82,10 @@ Let's say you want to set a quota.
 
 1.  On the Plans tab, click on the New Plan button.
 
-    ![](_images/Plan_1.png)
-
 2.  Name the new plan, e.g. `EchoQuotaPlan`, and confirm by clicking on
     the Create Plan button.
 
-    ![](_images/Plan_2.png)
-
 3.  To add a policy to the plan, click on the Add Policy button.
-
-    ![](_images/Plan_3.png)
 
 4.  Configure the policy:
 
@@ -111,27 +97,17 @@ Let's say you want to set a quota.
         and when the quota will be reset.
     4.  Confirm the configuration by clicking the Add Policy button.
 
-    ![](_images/Plan_4.png)
-
 5.  Lock the plan by clicking Lock Plan button, which will enable it for
     use in a contract with an API consumer.
-
-    ![](_images/Plan_5.png)
 
 ### Add an API
 
 1.  On the *EchoOrganization* page, switch to the APIs tab and click on
     the New API button.
 
-    ![](_images/API_1.png)
-
 2.  Name the new API, e.g. `EchoAPI`. Confirm by clicking on Create API.
 
-    ![](_images/API_2.png)
-
     You will see the page of the new API.
-
-    ![](_images/API_3.png)
 
 3.  Configure API implementation:
     1.  Switch to the Implementation tab and fill in the endpoint of the
@@ -140,20 +116,14 @@ Let's say you want to set a quota.
         Keep the other settings, because they fit the capabilities of
         this service.
 
-        ![](_images/API_4.png)
-
     2.  Save the settings by clicking on the Save button.
 
 4.  Assign a plan so that the API can only be used privately -- switch
     to the Plans tab, check the `EchoQuotaPlan` we have set up before,
     and confirm by clicking on the Save button.
 
-    ![](_images/API_5.png)
-
 5.  Finally, publish the API to enable its use by clicking on the
     Publish button.
-
-    ![](_images/API_6.png)
 
 6.  The status of the API will change to `PUBLISHED`, which means that
     the API is now available.
@@ -166,34 +136,22 @@ Add a consumer Create a contract (assign plan)
 1.  On the *EchoOrganization* page, switch to the Client Apps tab and
     click on the New Client App button.
 
-    ![](_images/Consumer_1.png)
-
 2.  Name the new client app (consumer), e.g. `EchoConsumer`. Confirm by
     clicking on Create Client App.
-
-    ![](_images/Consumer_2.png)
 
     You will see the home page of the new consumer.
 
 3.  To assign an API with a policy plan, click on the link
     Create a new API Contract for this Client App.
 
-    ![](_images/Consumer_3.png)
-
 4.  Scroll down and click the Select API, then search the `EchoAPI`,
     select it in the results and confirm selection by clicking on OK.
 
-    ![](_images/Consumer_4.png)
-
 5.  Complete the contract by clicking on the Create Contract button.
-
-    ![](_images/Consumer_5.png)
 
 6.  Finally, register the consumer by clicking on the Register button.
     In this step, Apiman will generate a unique key, which the consumer
     will use to access the private API.
-
-    ![](_images/Consumer_6.png)
 
 Testing the policy
 ------------------
@@ -206,8 +164,6 @@ endpoint.
 
 Apiman will generate a different key for you than the one that is used
 in the following examples. Replace the key before you use the code.
-
-![](_images/APIEndpointKey.png)
 
 ### Basic response
 

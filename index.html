@@ -1,11 +1,11 @@
 <body>
 
-    <div class="document">
-      <div class="documentwrapper">
-          <div class="body" role="main">
+    
+      
+          
 
-  <div class="section" id="getting-started-with-apiman">
-<h1>Getting Started with Apiman<a class="headerlink" href="#getting-started-with-apiman" title="Permalink to this headline"></a></h1>
+  
+<h1>Getting Started with Apiman</h1>
 <p>Apiman is a web-based API management tool that allows you to add an
 extra layer of access control functionality to an API service, which
 itself may not provide any.</p>
@@ -16,22 +16,22 @@ period by setting quotas, to analyse usage metrics, and more.</p>
 and through basic configuration of an API provider and consumer with
 a simple usage policy.</p>
 <p></p>
-<div class="section" id="preparing-the-environment">
-<h2>Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permalink to this headline"></a></h2>
+
+<h2>Preparing the environment</h2>
 <p>You need to prepare the Apiman by taking the following steps.</p>
 <p>Additionaly, we are going to use Echo service as a demo implementation
 provided by <em>apiman-quickstarts</em>, which will be prepared within just a few
 more steps.</p>
 <p>You will also need a HTTP client to test the configured policy,
 such as <strong class="program">curl</strong>, which we are going to use in examples.</p>
-<div class="admonition important">
+
 <p class="first admonition-title">Important</p>
 <p class="last">The environment that will result from the installation,
 takes advantage of default configurations and it does not solve any security
 issues that must be considered before production deployment!</p>
-</div>
-<div class="section" id="prepare-the-apiman">
-<h3>Prepare the <em>Apiman</em><a class="headerlink" href="#prepare-the-apiman" title="Permalink to this headline"></a></h3>
+
+
+<h3>Prepare the <em>Apiman</em></h3>
 <ol class="arabic simple">
 <li>Download the WildFly
 <a class="reference external" href="http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.zip">10.1.0.Final</a>
@@ -43,9 +43,9 @@ directory.</li>
 <li>Launch the WildFly with the standalone Apiman configuration: 
 <code class="docutils literal notranslate"><span class="pre">./bin/standalone.sh</span> <span class="pre">-c</span> <span class="pre">standalone-apiman.xml</span></code></li>
 </ol>
-</div>
-<div class="section" id="prepare-the-echo-service">
-<h3>Prepare the <em>Echo service</em><a class="headerlink" href="#prepare-the-echo-service" title="Permalink to this headline"></a></h3>
+
+
+<h3>Prepare the <em>Echo service</em></h3>
 <ol class="arabic simple">
 <li>Clone the <a class="reference external" href="https://github.com/apiman/apiman-quickstarts">apiman-quickstarts
 repository</a> (or
@@ -57,64 +57,61 @@ install Maven first.)</li>
 <li>Launch the service locally, which will suffice for our purpose:
 <code class="docutils literal notranslate"><span class="pre">mvn</span> <span class="pre">jetty:run</span></code></li>
 </ol>
-<p></p>
-</div>
-</div>
-<div class="section" id="logging-in-to-the-apiman-administration">
-<h2>Logging in to the <em>Apiman</em> administration<a class="headerlink" href="#logging-in-to-the-apiman-administration" title="Permalink to this headline"></a></h2>
+
+<h2>Logging in to the <em>Apiman</em> administration</h2>
 <p>Open the <a class="reference external" href="http://localhost:8080/apimanui/">Apiman UI</a> in your browser
 and login with “<code class="docutils literal notranslate"><span class="pre">admin</span></code>” / “<code class="docutils literal notranslate"><span class="pre">admin123!</span></code>”.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Login.png"><img alt="_images/Login.png" src="_images/Login.png" style="width: 752.8000000000001px; height: 369.6px;" /></a>
-</div>
+
 <p>You will see the Apiman index page.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Apiman_index.png"><img alt="_images/Apiman_index.png" src="_images/Apiman_index.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p></p>
-</div>
-<div class="section" id="configuring-a-simple-api-provider">
-<h2>Configuring a simple API provider<a class="headerlink" href="#configuring-a-simple-api-provider" title="Permalink to this headline"></a></h2>
-<div class="section" id="create-an-organization">
-<h3>Create an organization<a class="headerlink" href="#create-an-organization" title="Permalink to this headline"></a></h3>
+
+
+<h2>Configuring a simple API provider</h2>
+
+<h3>Create an organization</h3>
 <ol class="arabic">
 <li><p class="first">On the index page, click on the link <span class="guilabel">Create a New Organization</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Org_1.png"><img alt="_images/Org_1.png" src="_images/Org_1.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Fill in an organization name, e.g. <code class="docutils literal notranslate"><span class="pre">EchoCompany</span></code>. Confirm by clicking on
 <span class="guilabel">Create Organization</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Org_2.png"><img alt="_images/Org_2.png" src="_images/Org_2.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">You will see the page of your new organization.</p>
 </li>
 </ol>
-</div>
-<div class="section" id="create-a-plan">
-<h3>Create a plan<a class="headerlink" href="#create-a-plan" title="Permalink to this headline"></a></h3>
+
+
+<h3>Create a plan</h3>
 <p>Now, we are going to set a policy plan for our future API.
 In general, policy plans allow you to assign various policies to various consumers.
 Let’s say you want to set a quota.</p>
 <ol class="arabic">
 <li><p class="first">On the <span class="guilabel">Plans</span> tab, click on the <span class="guilabel">New Plan</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Plan_1.png"><img alt="_images/Plan_1.png" src="_images/Plan_1.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Name the new plan, e.g. <code class="docutils literal notranslate"><span class="pre">EchoQuotaPlan</span></code>, and confirm by clicking
 on the <span class="guilabel">Create Plan</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Plan_2.png"><img alt="_images/Plan_2.png" src="_images/Plan_2.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p></p>
 </li>
 <li><p class="first">To add a policy to the plan, click on the <span class="guilabel">Add Policy</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Plan_3.png"><img alt="_images/Plan_3.png" src="_images/Plan_3.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Configure the policy:</p>
 <ol class="arabic simple">
@@ -123,37 +120,37 @@ on the <span class="guilabel">Create Plan</span> button.</p>
 <li>You may keep the default response headers. These will inform the client about how many requests are used, what is the maximum, and when the quota will be reset.</li>
 <li>Confirm the configuration by clicking the <span class="guilabel">Add Policy</span> button.</li>
 </ol>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Plan_4.png"><img alt="_images/Plan_4.png" src="_images/Plan_4.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p></p>
 </li>
 <li><p class="first">Lock the plan by clicking <span class="guilabel">Lock Plan</span> button, which will enable
 it for use in a contract with an API consumer.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Plan_5.png"><img alt="_images/Plan_5.png" src="_images/Plan_5.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 </ol>
-</div>
-<div class="section" id="add-an-api">
-<h3>Add an API<a class="headerlink" href="#add-an-api" title="Permalink to this headline"></a></h3>
+
+
+<h3>Add an API</h3>
 <ol class="arabic">
 <li><p class="first">On the <em>EchoOrganization</em> page, switch to the <span class="guilabel">APIs</span> tab and click
 on the <span class="guilabel">New API</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_1.png"><img alt="_images/API_1.png" src="_images/API_1.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Name the new API, e.g. <code class="docutils literal notranslate"><span class="pre">EchoAPI</span></code>. Confirm by clicking on
 <span class="guilabel">Create API</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_2.png"><img alt="_images/API_2.png" src="_images/API_2.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p>You will see the page of the new API.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_3.png"><img alt="_images/API_3.png" src="_images/API_3.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p></p>
 </li>
 <li><p class="first">Configure API implementation:</p>
@@ -161,9 +158,9 @@ on the <span class="guilabel">New API</span> button.</p>
 <li><p class="first">Switch to the <span class="guilabel">Implementation</span> tab and fill in the endpoint
 of the local Echo service instance: <code class="docutils literal notranslate"><span class="pre">http://localhost:9999/apiman-echo</span></code></p>
 <p>Keep the other settings, because they fit the capabilities of this service.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_4.png"><img alt="_images/API_4.png" src="_images/API_4.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Save the settings by clicking on the <span class="guilabel">Save</span> button.</p>
 </li>
@@ -173,94 +170,94 @@ of the local Echo service instance: <code class="docutils literal notranslate"><
 the <span class="guilabel">Plans</span> tab, check the
 <code class="docutils literal notranslate"><span class="pre">EchoQuotaPlan</span></code> we have set up before, and confirm by clicking
 on the <span class="guilabel">Save</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_5.png"><img alt="_images/API_5.png" src="_images/API_5.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Finally, publish the API to enable its use by clicking on the
 <span class="guilabel">Publish</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/API_6.png"><img alt="_images/API_6.png" src="_images/API_6.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">The status of the API will change to <code class="docutils literal notranslate"><span class="pre">PUBLISHED</span></code>, which means that the API
 is now available.</p>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="configuring-a-simple-api-consumer">
-<h2>Configuring a simple API consumer<a class="headerlink" href="#configuring-a-simple-api-consumer" title="Permalink to this headline"></a></h2>
+
+
+
+<h2>Configuring a simple API consumer</h2>
 <p>Add a consumer
 Create a contract (assign plan)</p>
 <ol class="arabic">
 <li><p class="first">On the <em>EchoOrganization</em> page, switch to the <span class="guilabel">Client Apps</span> tab
 and click on the <span class="guilabel">New Client App</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_1.png"><img alt="_images/Consumer_1.png" src="_images/Consumer_1.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Name the new client app (consumer), e.g. <code class="docutils literal notranslate"><span class="pre">EchoConsumer</span></code>.
 Confirm by clicking on <span class="guilabel">Create Client App</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_2.png"><img alt="_images/Consumer_2.png" src="_images/Consumer_2.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 <p>You will see the home page of the new consumer.</p>
 </li>
 <li><p class="first">To assign an API with a policy plan, click on the link
 <span class="guilabel">Create a new API Contract for this Client App</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_3.png"><img alt="_images/Consumer_3.png" src="_images/Consumer_3.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Scroll down and click the <span class="guilabel">Select API</span>, then search
 the <code class="docutils literal notranslate"><span class="pre">EchoAPI</span></code>, select it in the results and confirm selection
 by clicking on <span class="guilabel">OK</span>.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_4.png"><img alt="_images/Consumer_4.png" src="_images/Consumer_4.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Complete the contract by clicking on the <span class="guilabel">Create Contract</span> button.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_5.png"><img alt="_images/Consumer_5.png" src="_images/Consumer_5.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 <li><p class="first">Finally, register the consumer by clicking on the <span class="guilabel">Register</span>
 button. In this step, Apiman will generate a unique key, which the consumer
 will use to access the private API.</p>
-<div class="figure align-center">
+
 <a class="reference internal image-reference" href="_images/Consumer_6.png"><img alt="_images/Consumer_6.png" src="_images/Consumer_6.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
+
 </li>
 </ol>
-</div>
-<div class="section" id="testing-the-policy">
-<h2>Testing the policy<a class="headerlink" href="#testing-the-policy" title="Permalink to this headline"></a></h2>
+
+
+<h2>Testing the policy</h2>
 <p>First, find the API key – on the <em>EchoConsumer</em> page, switch to the
 <span class="guilabel">APIs</span> tab, where you can copy the key and the location of the API
 endpoint.</p>
-<div class="admonition note">
+
 <p class="first admonition-title">Note</p>
 <p class="last">Apiman will generate a different key for you than the one that is
 used in the following examples. Replace the key before you use the code.</p>
-</div>
-<div class="figure align-center">
+
+
 <a class="reference internal image-reference" href="_images/APIEndpointKey.png"><img alt="_images/APIEndpointKey.png" src="_images/APIEndpointKey.png" style="width: 786.4000000000001px; height: 424.0px;" /></a>
-</div>
-<div class="section" id="basic-response">
-<h3>Basic response<a class="headerlink" href="#basic-response" title="Permalink to this headline"></a></h3>
+
+
+<h3>Basic response</h3>
 <p>To check that you can get through to the Echo service, which was made private
 and is proxied by the Apiman, use the Apiman-provided endpoint and append
 a regular Echo service path, for example:</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; -X GET https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+
+<span class="caption-text">Request example</span>
+<pre><span></span> curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; -X GET https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
+</pre>
+
+
+
+<span class="caption-text">Response example</span>
+<pre><span></span><span class="p">{</span>
   <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
   <span class="nt">&quot;resource&quot;</span> <span class="p">:</span> <span class="s2">&quot;/apiman-echo/hello&quot;</span><span class="p">,</span>
   <span class="nt">&quot;uri&quot;</span> <span class="p">:</span> <span class="s2">&quot;/apiman-echo/hello&quot;</span><span class="p">,</span>
@@ -274,22 +271,22 @@ a regular Echo service path, for example:</p>
   <span class="nt">&quot;bodyLength&quot;</span> <span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
   <span class="nt">&quot;bodySha1&quot;</span> <span class="p">:</span> <span class="kc">null</span>
 <span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="quota-information">
-<h3>Quota information<a class="headerlink" href="#quota-information" title="Permalink to this headline"></a></h3>
+</pre>
+
+
+
+
+<h3>Quota information</h3>
 <p>To check the quota consumption, view the response headers, for example:</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Request example</span><a class="headerlink" href="#id4" title="Permalink to this code"></a></div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; --head https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Response example</span><a class="headerlink" href="#id5" title="Permalink to this code"></a></div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
+
+<span class="caption-text">Request example</span>
+<pre><span></span>curl -k -H &quot;X-API-Key: 81430d0e-8f62-46d4-822b-167edda1ed7f&quot; --head https://localhost:8443/apiman-gateway/EchoOrganization/EchoAPI/1.0/hello
+</pre>
+
+
+
+<span class="caption-text">Response example</span>
+<pre><span></span>HTTP/1.1 200 OK
 X-Powered-By: Undertow/1
 X-Quota-Remaining: 6
 Server: WildFly/10
@@ -300,24 +297,20 @@ X-Quota-Reset: 84122
 Connection: keep-alive
 Content-Type: application/json
 Content-Length: 320
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline"></a></h2>
+</pre>
+
+
+
+
+
+<h2>Further reading</h2>
 <p><a class="reference external" href="https://apiman.gitbooks.io/apiman-user-guide/">User Guide</a></p>
 <p><strong>The end!</strong></p>
-</div>
-</div>
 
 
-          </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer" role="contentinfo">
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.6.
-    </div>
-  </body>
+
+
+          
+      
+
+</body>
